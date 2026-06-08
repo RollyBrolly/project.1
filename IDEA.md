@@ -1,34 +1,30 @@
-# Your Project
-
-Fill this in as you build. It doubles as your **submission README**, and it maps
-directly to how projects are judged (meaningful Stellar use, real problem,
-working demo).
+# School Canteen Digital Wallet
 
 ## Idea
-- **Track:** Remittance / Financial Inclusion / DeFi & RWA / AI / Social Impact / Open
-- **Idea # (from the 300-ideas list, if any):**
-- **One-liner:**
+- **Track:** Financial Inclusion / Social Impact
+- **Idea # (from the 300-ideas list, if any):** 70
+- **One-liner:** A digital canteen wallet for students that replaces cash with Stellar USDC, allowing parents to top up and monitor spending.
 
 ## Problem
-Who has this problem, and why does it matter? (A clear Philippines remittance /
-payments / financial-inclusion angle scores well.)
+Parents give students cash for the canteen — cash gets lost, stolen, or misused. Students often lack financial tracking, and merchants deal with small change. CanteenPay digitizes this using USDC for stable, instant payments.
 
 ## How it uses Stellar
-Which Stellar pieces are **core** (not cosmetic)? e.g. payments, trustlines,
-path payments, claimable balances, a Soroban contract, anchors (SEP-24/31),
-Soroswap/Blend/Reflector. Stellar must be central to the product.
+- **Payments:** Core mechanism for top-ups (Parent -> Student) and meal payments (Student -> Merchant).
+- **USDC (Testnet):** Used as a stable medium of exchange to avoid XLM price volatility for daily meals.
+- **Trustlines:** Managed within the app to allow students and merchants to receive USDC.
+- **QR Payments:** Standardized QR codes for student identification at checkout.
 
 ## What works in the demo
-- [ ] Connect wallet (Freighter, testnet)
-- [ ] Core flow runs end-to-end on testnet
-- [ ] _(your headline feature here)_
+- [x] Connect wallet (Freighter, testnet)
+- [x] Parent Dashboard: View balances and top up students.
+- [x] Student Dashboard: View allowance and show QR code for payment.
+- [x] Merchant Dashboard: Scan student QR and initiate USDC charges.
 
 ## Setup / run
-How a judge runs it locally:
 - Network: **testnet**
 - `cd web && npm install && npm run dev`
-- Contract (if used): `.\scripts\deploy.ps1`, then set `NEXT_PUBLIC_CONTRACT_ID`
-- Any other env vars / steps:
+- **Wallet:** Use Freighter on Testnet. Fund your account with Friendbot using the "Get Test XLM" button in the app.
+- **USDC:** The app will prompt you to "Add Trustline" if you don't have one for USDC.
 
 ## Demo
 - 2–4 min video link (show the core flow working on testnet):
